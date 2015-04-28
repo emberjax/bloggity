@@ -1,0 +1,11 @@
+<h1>Bloggity: The EmberJax Blog</h1>
+
+<div id="posts">
+  <ul>
+    {{# each model as |post| }}
+      {{#link-to "post" post }}
+        <li>{{ post.title }}</li>
+      {{/link-to}}
+    {{/ each }}
+  </ul>
+</div>
