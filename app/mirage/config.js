@@ -24,6 +24,8 @@ export default function() {
     this.get('/contacts/:id', 'user');
     this.get('/contacts/:id', ['contact', 'addresses']);
   */
+  this.get('/posts', 'posts');
+  this.get('/posts/:id', 'post');
 
   /*
     POST shorthands
