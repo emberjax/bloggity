@@ -7,7 +7,7 @@ import startApp from 'bloggity/tests/helpers/start-app';
 
 var application;
 
-module('Acceptance: ApplicationRouteRedirects', {
+module('Acceptance: Post / Posts', {
   beforeEach: function() {
     application = startApp();
   },
