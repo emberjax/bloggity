@@ -1,0 +1,9 @@
+<h1>Posts Index</h1>
+
+<ul class='posts'>
+  {{#each post in controller}}
+    {{#link-to 'post' post}}
+      <li class='post-{{post.id}}'>{{post.title}}</li>
+    {{/link-to}}
+  {{/each}}
+</ul>
