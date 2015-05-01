@@ -20,9 +20,20 @@ module('Acceptance: Post / Posts', {
 test('visiting "/" redirects to posts', function(assert) {
   server.create('post');
   visit('/');
+  var posts = server.createList('post', 2);
+ 
 
   andThen(function() {
     assert.equal(currentURL(), '/posts');
+    assert.equal(find('h1').text(), 'Bloggity: The EmberJax Blog');
+    posts.forEach((post)=>{
+      assert.equal(find('li.post-' + post.id).text(), post.title);
+    });
+  });
+  click('a:last');
+
+  andThen(function(){
+    assert.ok( /posts/.test(currentURL()));
   });
 });
 
@@ -36,3 +47,18 @@ test('posts show displays title and body of desired post', function(assert) {
     assert.ok(/bar/.test(find("div .content").text()));
   });
 });
+
+
+
+test('posts show displays title and body of desired post', function(assert) {
+  var post = server.create('post', { id: 1, title: 'foo', body: 'bar' });
+  visit('/posts/1');
+
+  click('.back');
+  andThen(function(){
+    assert.equal(currentURL(), '/posts');
+  });
+});
+
+
+

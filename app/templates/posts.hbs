@@ -2,10 +2,10 @@
 
 <div id="posts">
   <ul>
-    {{# each model as |post| }}
+    {{#each model as  |post|}}
       {{#link-to "post" post }}
-        <li>{{ post.title }}</li>
+        <li class='post-{{post.id}}'>{{ post.title }}</li>
       {{/link-to}}
-    {{/ each }}
+    {{/each }}
   </ul>
 </div>
