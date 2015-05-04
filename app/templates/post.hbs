@@ -1,9 +1,11 @@
+
 <h1>{{ model.title }}</h1>
 
 <div class="content">
   {{ model.body }}
 </div>
 
-{{# link-to "posts" }}
+
+{{#link-to 'posts' class='back'}}
   Back
-{{/ link-to }}
+{{/link-to}}
