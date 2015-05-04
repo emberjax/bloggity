@@ -1,10 +1,10 @@
 # Bloggity
 
-Bloggity is a tool designed to help teach Ember and EmberCLI by making
+Bloggity is a tool designed to help teach [Ember](http://emberjs.com) and [EmberCLI](http://ember-cli.com) by making
 a blog
 
 Right now this only covers the creation of the index and show pages of
-our (very simple) blog.  This is a repo to facility this
+our (very simple) blog.  This is a repo to facilitate this
 [meetup](http://www.meetup.com/EmberJax/events/221439735/)
 
 More to come!
