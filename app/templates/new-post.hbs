@@ -1,0 +1,15 @@
+<h1> New Post </h1>
+
+<form>
+  <div>
+    <label>Title</label><br/>
+    {{ input type=text value=model.title }}
+  </div>
+  <div>
+    <label>Body</label><br/>
+    {{ textarea value=model.body }}
+  </div>
+
+  <button {{ action 'submit' }}>Create Article!</button>
+  {{ link-to "back"  "posts" }}
+</form>
