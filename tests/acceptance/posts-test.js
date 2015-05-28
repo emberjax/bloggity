@@ -21,13 +21,13 @@ test('visiting "/" redirects to posts', function(assert) {
   server.create('post');
   visit('/');
   var posts = server.createList('post', 2);
- 
+
 
   andThen(function() {
     assert.equal(currentURL(), '/posts');
     assert.equal(find('h1').text(), 'Bloggity: The EmberJax Blog');
     posts.forEach((post)=>{
-      assert.equal(find('li.post-' + post.id).text(), post.title);
+      assert.equal(find(`li.post-${post.id}`).text(), post.title);
     });
   });
   click('a:last');

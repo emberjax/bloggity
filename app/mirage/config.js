@@ -34,13 +34,15 @@ export default function() {
     this.post('/contacts', 'user'); // specify the type of resource to be created
   */
 
-    this.post('/posts', 'post'); // specify the type of resource to be created
+    this.post('/posts', 'post');
   /*
     PUT shorthands
 
     this.put('/contacts/:id');
     this.put('/contacts/:id', 'user'); // specify the type of resource to be updated
   */
+
+    this.put('/posts/:id', 'post');
 
   /*
     DELETE shorthands
